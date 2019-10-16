@@ -32,6 +32,6 @@ module.exports = {
     es6: true
   },
   parserOptions: {
-    sourceType: 'script'
+    sourceType: 'module'
   }
 }
