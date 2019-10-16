@@ -1,6 +1,6 @@
 {
   "name": "@suburbicode/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "description": "An ESLint shareable config for Suburbicode projects",
   "keywords": [
@@ -34,7 +34,6 @@
     "eslint-plugin-unicorn": "^12.1.0"
   },
   "devDependencies": {
-    "@logux/eslint-config": "^32.2.0",
     "eslint": "^6.5.1",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-es5": "^1.4.1",
