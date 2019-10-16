@@ -13,7 +13,9 @@
   "author": "Suburbicode <suburbicode@pm.me>",
   "license": "MIT",
   "repository": "suburbicode/eslint-config",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "engines": {
     "node": ">=8.3.0"
   },
