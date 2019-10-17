@@ -1,6 +1,6 @@
 {
   "name": "@suburbicode/eslint-config",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "description": "An ESLint shareable config for Suburbicode projects",
   "keywords": [

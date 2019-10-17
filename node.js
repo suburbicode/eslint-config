@@ -10,7 +10,14 @@ module.exports = {
     'unicorn/prefer-includes': 'error',
     'unicorn/no-for-loop': 'error',
 
-    'prefer-arrow/prefer-arrow-functions': 'error',
+    'prefer-arrow/prefer-arrow-functions': [
+      'error',
+      {
+        disallowPrototype: false,
+        singleReturnOnly: true,
+        classPropertiesAllowed: false
+      }
+    ],
     'prefer-let/prefer-let': 'error',
 
     'template-curly-spacing': ['error', 'always'],
@@ -23,6 +30,7 @@ module.exports = {
     'require-yield': 'error',
     'arrow-spacing': 'error',
     'arrow-parens': ['error', 'as-needed'],
+    'arrow-body-style': ['error', 'as-needed', { requireReturnForObjectLiteral: true }],
     'no-var': 'error'
   },
   env: {

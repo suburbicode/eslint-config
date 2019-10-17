@@ -19,7 +19,14 @@ module.exports = {
       rules: {
         ...es5disabled,
 
-        'prefer-arrow/prefer-arrow-functions': 'error',
+        'prefer-arrow/prefer-arrow-functions': [
+          'error',
+          {
+            disallowPrototype: false,
+            singleReturnOnly: true,
+            classPropertiesAllowed: false
+          }
+        ],
         'prefer-let/prefer-let': 'error',
 
         'template-curly-spacing': ['error', 'always'],
