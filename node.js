@@ -1,10 +1,6 @@
 module.exports = {
   extends: './index.js',
-  plugins: [
-    'prefer-let',
-    'unicorn',
-    'node'
-  ],
+  plugins: ['prefer-arrow', 'prefer-let', 'unicorn', 'node'],
   rules: {
     'node/no-unsupported-features/node-builtins': 'error',
     'node/no-unsupported-features/es-builtins': 'error',
@@ -14,6 +10,7 @@ module.exports = {
     'unicorn/prefer-includes': 'error',
     'unicorn/no-for-loop': 'error',
 
+    'prefer-arrow/prefer-arrow-functions': 'error',
     'prefer-let/prefer-let': 'error',
 
     'template-curly-spacing': ['error', 'always'],
@@ -34,4 +31,4 @@ module.exports = {
   parserOptions: {
     sourceType: 'module'
   }
-}
+};

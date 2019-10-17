@@ -1,18 +1,14 @@
-let globals = require('globals')
+let globals = require('globals');
 
-let jest = { }
+let jest = {};
+
 for (let i in globals.jest) {
-  if (i !== 'test' && i !== 'xtest') jest[i] = globals.jest[i]
+  if (i !== 'test' && i !== 'xtest') jest[i] = globals.jest[i];
 }
 
 module.exports = {
   extends: 'standard',
-  plugins: [
-    'jest',
-    'security',
-    'node',
-    'unicorn'
-  ],
+  plugins: ['jest', 'security', 'node', 'unicorn'],
   rules: {
     'standard/no-callback-literal': 'off',
 
@@ -35,13 +31,13 @@ module.exports = {
     'unicorn/prefer-event-key': 'error',
     'unicorn/regex-shorthand': 'error',
 
-    'import/order': ['error', {
-      'groups': [
-        ['builtin', 'external'],
-        ['internal', 'parent', 'sibling', 'index']
-      ],
-      'newlines-between': 'always'
-    }],
+    'import/order': [
+      'error',
+      {
+        'groups': [['builtin', 'external'], ['internal', 'parent', 'sibling', 'index']],
+        'newlines-between': 'always'
+      }
+    ],
 
     'nonblock-statement-body-position': 'error',
     'no-misleading-character-class': 'error',
@@ -55,20 +51,24 @@ module.exports = {
     'block-scoped-var': 'error',
     'no-invalid-this': 'error',
     'global-require': 'error',
-    'no-unused-vars': ['error', {
-      args: 'after-used',
-      vars: 'all'
-    }],
+    'no-unused-vars': [
+      'error',
+      {
+        args: 'after-used',
+        vars: 'all'
+      }
+    ],
     'no-new-symbol': 'error',
     'getter-return': 'error',
     'for-direction': 'error',
     'no-lonely-if': 'error',
     'prefer-const': 'off',
     'quote-props': ['error', 'consistent-as-needed'],
-    'func-style': ['error', 'declaration'],
+    'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
     'no-shadow': 'error',
-    'max-len': ['error', 80],
-    'no-new': 'off'
+    'max-len': ['error', 120],
+    'no-new': 'off',
+    'semi': ['error', 'always', { omitLastInOneLineBlock: true }]
   },
   env: {
     browser: true,
@@ -79,9 +79,12 @@ module.exports = {
       files: ['test/*', 'test/**/*', '*.test.js'],
       rules: {
         'node/no-unpublished-require': 'off',
-        'node/no-missing-require': ['error', {
-          allowModules: ['worker_threads']
-        }]
+        'node/no-missing-require': [
+          'error',
+          {
+            allowModules: ['worker_threads']
+          }
+        ]
       },
       globals: jest
     },
@@ -107,4 +110,4 @@ module.exports = {
       globals: jest
     }
   ]
-}
+};
